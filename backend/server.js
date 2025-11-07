@@ -10,10 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/books', require('./routes/books'));
-app.use('/api/cart', require('./routes/cart'));
-app.use('/api/orders', require('./routes/orders'));
+app.use('/api/auth', require('./middleware/routes/auth'));
+app.use('/api/books', require('./middleware/routes/books'));
+app.use('/api/cart', require('./middleware/routes/cart'));
+app.use('/api/orders', require('./middleware/routes/orders'));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/bookstore')
