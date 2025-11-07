@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Book = require('./models/Book');
+const Book = require('./middleware/models/Book');
 require('dotenv').config();
 
 const sampleBooks = [
